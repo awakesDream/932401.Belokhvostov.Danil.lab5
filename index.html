@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешественник</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .countries {
+            column-count: 2;
+            column-gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Белохвостов Данил</h1>
+        <p>Путешественник</p>
+        <button id="theme-toggle" type="button">Тёмная тема</button>
+    </header>
+
+    <nav class="nav" aria-label="Основная навигация">
+        <ul>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#dashboard">Прогресс</a></li>
+            <li><a href="#countries">Страны</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <div>
+                <img src="https://n1s1.hsmedia.ru/be/90/34/be9034d762857e5ba510937ce31b14b9/728x728_1_666010ab55120072825c74de5a7e19b0@1000x1000_0x10fmyjvQ_7882540427738188474.jpg.webp" alt="Портрет" width="150" height="150">
+            </div>
+
+            <section id="skills" aria-labelledby="skills-title">
+                <h2 id="skills-title" class="static">Навыки</h2>
+
+                <div class="skills-row">
+                    <article class="skill-card">
+                        <h3>Навигация</h3>
+                        <dl>
+                            <dt>Уровень</dt>
+                            <dd>92%</dd>
+                        </dl>
+                        <div class="progress" role="progressbar"
+                             aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"
+                             aria-label="Уровень навыка Навигация">
+                            <div class="progress-bar" style="width: 92%;"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Языки</h3>
+                        <dl>
+                            <dt>Уровень</dt>
+                            <dd>75%</dd>
+                        </dl>
+                        <div class="progress" role="progressbar"
+                             aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                             aria-label="Уровень навыка Языки">
+                            <div class="progress-bar" style="width: 75%;"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Фотография</h3>
+                        <dl>
+                            <dt>Уровень</dt>
+                            <dd>60%</dd>
+                        </dl>
+                        <div class="progress" role="progressbar"
+                             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                             aria-label="Уровень навыка Фотография">
+                            <div class="progress-bar" style="width: 60%;"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Первая помощь</h3>
+                        <dl>
+                            <dt>Уровень</dt>
+                            <dd>80%</dd>
+                        </dl>
+                        <div class="progress" role="progressbar"
+                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                             aria-label="Уровень навыка Первая помощь">
+                            <div class="progress-bar" style="width: 80%;"></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="skills-list-section" aria-labelledby="skills-list-title">
+                <h2 id="skills-list-title">Мои навыки для поездок</h2>
+
+                <div class="skills-controls">
+                    <button id="add-skill" type="button">Добавить навык</button>
+                    <button id="clear-skills" type="button">Очистить навыки</button>
+                    <button id="toggle-skills" type="button">Скрыть список навыков</button>
+                </div>
+
+                <ul id="skills-list" class="skills-list">
+                    <li>Ориентирование по карте <button class="remove-skill" type="button">Удалить</button></li>
+                    <li>Знание базового английского <button class="remove-skill" type="button">Удалить</button></li>
+                    <li>Оказание первой медицинской помощи <button class="remove-skill" type="button">Удалить</button></li>
+                </ul>
+            </section>
+
+            <section id="dashboard" aria-labelledby="dashboard-title">
+                <h2 id="dashboard-title">Статистика прогресса</h2>
+                <div class="dashboard">
+                    <article class="stat-card">
+                        <h3>Страны</h3>
+                        <p class="stat-value">12</p>
+                        <p class="stat-desc">посещено</p>
+                    </article>
+                    <article class="stat-card">
+                        <h3>Города</h3>
+                        <p class="stat-value">34</p>
+                        <p class="stat-desc">исследовано</p>
+                    </article>
+                    <article class="stat-card">
+                        <h3>Фото</h3>
+                        <p class="stat-value">1250</p>
+                        <p class="stat-desc">в архиве</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="countries" aria-labelledby="countries-title">
+                <h2 id="countries-title">Посещённые страны</h2>
+                <div class="countries">
+                    <ol>
+                        <li>Франция</li>
+                        <li>Япония</li>
+                        <li>Норвегия</li>
+                        <li>Исландия</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="contact" aria-labelledby="contact-title">
+                <h2 id="contact-title">Связь со мной</h2>
+                <form action="#" method="post">
+                    <div>
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="username" placeholder="Введите ваше имя" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                    </div>
+                    <div>
+                        <label for="message">Сообщение:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Привет, понравился" required></textarea>
+                    </div>
+                    <button type="submit" style="font-size: 16px;">Отправить</button>
+                </form>
+            </section>
+        </main>
+
+        <aside aria-label="Любимое место">
+            <span class="badge">Имба</span>
+            <h3>Любимое место</h3>
+            <p>Музей Лувра: Париж, Франция</p>
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/960px-Louvre_Museum_Wikimedia_Commons.jpg?utm_source=ru.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Фотография Лувра" width="150" height="150">
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Белохвостов Данил.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
